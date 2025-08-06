@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
-import { TrendingUp, Calendar, Users, MessageCircle, Heart, Share2, Clock, CircleCheck as CheckCircle2, CircleAlert as AlertCircle } from 'lucide-react-native';
+import { TrendingUp, Calendar, Users, MessageCircle, Heart, Share2, Clock, CircleCheck as CheckCircle2, CircleAlert as AlertCircle, LogIn } from 'lucide-react-native';
 import { useApp } from '@/contexts/AppContext';
 import MetricCard from '@/components/MetricCard';
 
@@ -73,7 +73,16 @@ export default function Dashboard() {
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.header}>
           <Text style={styles.title}>Dashboard</Text>
-          <Text style={styles.subtitle}>Welcome back! Here's your social media overview</Text>
+          <View style={styles.headerRight}>
+            <Text style={styles.subtitle}>Welcome back! Here's your social media overview</Text>
+            <TouchableOpacity 
+              style={styles.loginLink}
+              onPress={() => router.push('/login')}
+            >
+              <LogIn size={16} color="#1DA1F2" />
+              <Text style={styles.loginLinkText}>Login</Text>
+            </TouchableOpacity>
+          </View>
         </View>
 
         <View style={styles.statsGrid}>
@@ -187,6 +196,11 @@ const styles = StyleSheet.create({
     padding: 20,
     paddingBottom: 10,
   },
+  headerRight: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
+  },
   title: {
     fontSize: 28,
     fontWeight: '700',
@@ -196,6 +210,22 @@ const styles = StyleSheet.create({
   subtitle: {
     fontSize: 16,
     color: '#64748B',
+    flex: 1,
+    marginRight: 16,
+  },
+  loginLink: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#E0F2FE',
+    borderRadius: 8,
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+  },
+  loginLinkText: {
+    fontSize: 14,
+    color: '#1DA1F2',
+    fontWeight: '600',
+    marginLeft: 4,
   },
   statsGrid: {
     flexDirection: 'row',

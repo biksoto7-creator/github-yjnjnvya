@@ -10,6 +10,7 @@ export default function RootLayout() {
   return (
     <AppProvider>
       <Stack screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="login" />
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="auto" />
