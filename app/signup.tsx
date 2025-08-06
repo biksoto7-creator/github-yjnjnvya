@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Alert, KeyboardAvoidingView, Platform, TextInput } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Stack, useRouter } from 'expo-router';
-import { Mail, ArrowRight, Twitter, Instagram, Facebook, Linkedin, CheckCircle, Shield, Zap, Users } from 'lucide-react-native';
+import { Mail, ArrowRight, Twitter, Instagram, Facebook, Linkedin, CircleCheck as CheckCircle, Shield, Zap, Users } from 'lucide-react-native';
 
 export default function SignupScreen() {
   const router = useRouter();

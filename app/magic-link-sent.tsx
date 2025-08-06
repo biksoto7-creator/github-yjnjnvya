@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Stack, useRouter, useLocalSearchParams } from 'expo-router';
-import { Mail, ArrowLeft, RefreshCw, CheckCircle } from 'lucide-react-native';
+import { Mail, ArrowLeft, RefreshCw, CircleCheck as CheckCircle } from 'lucide-react-native';
 
 export default function MagicLinkSentScreen() {
   const router = useRouter();
