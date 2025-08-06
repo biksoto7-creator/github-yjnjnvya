@@ -11,6 +11,8 @@ export default function RootLayout() {
     <AppProvider>
       <Stack screenOptions={{ headerShown: false }}>
         <Stack.Screen name="login" />
+        <Stack.Screen name="signup" />
+        <Stack.Screen name="magic-link-sent" />
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="auto" />
